@@ -1,12 +1,32 @@
-- 👋 Hi, I’m @NickgotGitHub (Nicholas Salmon)
-- 👀 I’m currently interested in creating video games and sharing my creations to a wider audience. I'm also an artist in my free time. 🤷‍♂️
-- 🌱 I’m currently learning Python and C, not particularly good in either of them but I try.
-- 💞️ I’m looking to collaborate on creating this Tetris game and hopefully one day have it available for download on the app store. 🍎
-- 📫 How to reach me? You can find me on YouTube (@GOGEDIT) or at my email (sir.nsalmon@gmail.com), looking forward to speaking with you!
-- 😄 Pronouns: I am a straight black male.
-- ⚡ Fun fact: I had cystic hygroma at birth 💖
+# Isometric Tetris (PixiJS)
 
-<!---
-NickgotGitHub/NickgotGitHub is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+This project is a starter template for building an isometric Tetris game using **TypeScript** and **PixiJS**. It includes touch controls via **Hammer.js** and is structured for easy extension with levels, maps and other game systems.
+
+## Tech Stack
+- **PixiJS** for WebGL rendering
+- **Hammer.js** for touch gestures
+- **TypeScript** compiled to plain JavaScript
+
+## Development
+Install dependencies:
+```bash
+npm install
+```
+
+Build the project:
+```bash
+npm run build
+```
+which simply runs `tsc` to compile files to the `dist/` folder.
+
+Open `index.html` in a browser to test the game. The basic implementation draws an isometric board and allows swipe gestures to rotate or move the current piece.
+
+## Folder Structure
+```
+assets/            Sprite sheets and other assets
+src/               TypeScript source
+  main.ts          Game entry point
+index.html         Web page that loads the game
+```
+
+This codebase is intentionally simple. It serves as a foundation for experimenting with additional features like map variety, level progression and mobile deployment using solutions such as Capacitor.
