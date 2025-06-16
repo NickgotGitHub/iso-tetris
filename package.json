@@ -1,0 +1,19 @@
+{
+  "name": "iso-tetris",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "npx vite",
+    "build": "npx vite build",
+    "test": "echo 'No tests specified' && exit 0"
+  },
+  "dependencies": {
+    "pixi.js": "^7.2.4",
+    "hammerjs": "^2.0.8"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2",
+    "vite": "^4.4.0"
+  }
+}
