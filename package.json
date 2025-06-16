@@ -1,0 +1,22 @@
+{
+  "name": "iso-tetris",
+  "version": "1.0.0",
+  "description": "Isometric Tetris prototype built with PixiJS and TypeScript",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "hammerjs": "^2.0.8",
+    "pixi.js": "^8.10.1"
+  },
+  "devDependencies": {
+    "@types/hammerjs": "^2.0.46",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
