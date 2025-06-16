@@ -4,7 +4,8 @@
   "description": "Isometric Tetris prototype built with PixiJS and TypeScript",
   "main": "dist/main.js",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "dev:web": "bun run build && bun x serve ."
   },
   "keywords": [],
   "author": "",

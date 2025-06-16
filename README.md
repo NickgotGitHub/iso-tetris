@@ -19,6 +19,12 @@ npm run build
 ```
 which simply runs `tsc` to compile files to the `dist/` folder.
 
+Start a development server:
+```bash
+bun run dev:web
+```
+This builds the project and serves `index.html` on a local web server for easy testing.
+
 Open `index.html` in a browser to test the game. The basic implementation draws an isometric board and allows swipe gestures to rotate or move the current piece.
 
 ## Folder Structure
