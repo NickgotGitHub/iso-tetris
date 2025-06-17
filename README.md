@@ -1,11 +1,11 @@
 # Isometric Tetris (PixiJS)
 
-This project is a starter template for building an isometric Tetris game using **TypeScript** and **PixiJS**. It includes touch controls via **Hammer.js** and is structured for easy extension with levels, maps and other game systems.
+This project is a starter template for building an isometric Tetris game using **JavaScript** and **PixiJS**. It includes touch controls via **Hammer.js** and is structured for easy extension with levels, maps and other game systems.
 
 ## Tech Stack
 - **PixiJS** for WebGL rendering
 - **Hammer.js** for touch gestures
-- **TypeScript** compiled to plain JavaScript
+- **JavaScript** for core game logic
 
 ## Development
 Install dependencies:
@@ -17,7 +17,7 @@ Build the project:
 ```bash
 npm run build
 ```
-which simply runs `tsc` to compile files to the `dist/` folder.
+which uses `bun build` to bundle files to the `dist/` folder.
 
 Start a development server:
 ```bash
@@ -30,8 +30,8 @@ Open `index.html` in a browser to test the game. The basic implementation draws 
 ## Folder Structure
 ```
 assets/            Sprite sheets and other assets
-src/               TypeScript source
-  main.ts          Game entry point
+src/               JavaScript source
+  main.js          Game entry point
 index.html         Web page that loads the game
 ```
 

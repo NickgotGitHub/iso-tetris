@@ -14,19 +14,19 @@ const WALL_HEIGHT = 20;
 const BLOCK_SIZE = 30; // smaller blocks for mobile
 const ISO_MATRIX = [ [0.5, -0.5], [0.25, 0.25, 0] ];
 
-function toIsometric(x:number, y:number, z:number){
+function toIsometric(x, y, z){
     const isoX = ISO_MATRIX[0][0] * x + ISO_MATRIX[0][1] * y;
     const isoY = ISO_MATRIX[1][0] * x + ISO_MATRIX[1][1] * y + ISO_MATRIX[1][2] * z;
     return {x: isoX, y: isoY};
 }
 
 // board and shapes
-const board:number[][] = [];
+const board = [];
 for(let y=0;y<WALL_HEIGHT;y++){
     board[y] = new Array(WALL_WIDTH).fill(0);
 }
 
-const shapes:number[][][] = [
+const shapes = [
     [[1,1,1],[0,1,0]],
     [[0,2,2],[2,2,0]],
     [[3,3,0],[0,3,3]],
@@ -44,7 +44,7 @@ let fallSpeed = 500; // ms
 
 // load sprites
 const spriteSheet = PIXI.Texture.from('assets/sprite_sheet.png');
-const blockTextures: {[key:number]: PIXI.Texture} = {};
+const blockTextures = {};
 for(let i=0;i<8;i++){
     const frame = new PIXI.Rectangle(i * spriteSheet.width / 8, 0, spriteSheet.width / 8, spriteSheet.height);
     blockTextures[i+1] = new PIXI.Texture({ source: spriteSheet.baseTexture, frame });
@@ -54,7 +54,7 @@ const container = new PIXI.Container();
 container.position.set(window.innerWidth/2.5, window.innerHeight/1.5);
 app.stage.addChild(container);
 
-function drawBoard(tempBoard:number[][]){
+function drawBoard(tempBoard){
     container.removeChildren();
     for(let y=WALL_HEIGHT-1; y>=0; y--){
         for(let x=WALL_WIDTH-1; x>=0; x--){
@@ -72,7 +72,7 @@ function drawBoard(tempBoard:number[][]){
     }
 }
 
-function getTemporaryBoard():number[][]{
+function getTemporaryBoard(){
     const temp = board.map(row=>row.slice());
     for(let y=0; y<currentPiece.length; y++){
         for(let x=0; x<currentPiece[y].length; x++){
@@ -88,11 +88,11 @@ function getTemporaryBoard():number[][]{
     return temp;
 }
 
-function rotate(shape:number[][]){
+function rotate(shape){
     return shape[0].map((_,i)=> shape.map(row=> row[i]).reverse());
 }
 
-function validSpace(shape:number[][], posX:number, posY:number){
+function validSpace(shape, posX, posY){
     for(let y=0; y<shape.length; y++){
         for(let x=0; x<shape[y].length; x++){
             if(shape[y][x]){
@@ -116,7 +116,7 @@ function placePiece(){
     }
 }
 
-function tick(ticker: PIXI.Ticker){
+function tick(ticker){
     const delta = ticker.deltaTime;
     time += delta;
     if(time>fallSpeed){
@@ -159,6 +159,6 @@ hammer.on('panright',()=>{
     if(validSpace(currentPiece,currentX+1,currentY)) currentX++;
 });
 
-function tapArea(canvas:HTMLCanvasElement){
+function tapArea(canvas){
     return canvas;
 }

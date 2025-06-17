@@ -1,10 +1,10 @@
 {
   "name": "iso-tetris",
   "version": "1.0.0",
-  "description": "Isometric Tetris prototype built with PixiJS and TypeScript",
+  "description": "Isometric Tetris prototype built with PixiJS and JavaScript",
   "main": "dist/main.js",
   "scripts": {
-    "build": "bun build src/main.ts --outdir dist",
+    "build": "bun build src/main.js --outdir dist",
     "dev:web": "bun run build && bun x serve ."
   },
   "keywords": [],
@@ -15,9 +15,5 @@
     "hammerjs": "^2.0.8",
     "pixi.js": "^8.10.1"
   },
-  "devDependencies": {
-    "@types/hammerjs": "^2.0.46",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.8.3"
-  }
+  "devDependencies": {}
 }
