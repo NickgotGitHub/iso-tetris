@@ -1,3 +1,0 @@
-"""
-Core game logic package.
-""" 
