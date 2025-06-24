@@ -1,13 +1,35 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Isometric Tetris</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+  <div id="game-container"></div>
+  <div class="ui-container">
+    <p>Lines: <span id="lines">0</span></p>
+  </div>
+  <div class="theme-switcher">
+    <button id="theme-synthwave">Synthwave</button>
+    <button id="theme-classic">Classic</button>
+    <button id="theme-mono">Monochrome</button>
+  </div>
+  <div id="controls-container">
+    <button id="left-btn">←</button>
+    <button id="rotate-btn">↻</button>
+    <button id="drop-btn">DROP</button>
+    <button id="down-btn">↓</button>
+    <button id="right-btn">→</button>
+  </div>
+  <div id="game-over-modal">
+    <h2>Game Over</h2>
+    <button id="restart-button">Restart</button>
+  </div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
 </html>
