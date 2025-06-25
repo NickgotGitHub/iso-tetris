@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>2D Isometric Tetris</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="ui-container">
+        <p>Lines: <span id="lines">0</span></p>
+    </div>
+
+    <div class="theme-switcher">
+        <button id="theme-synthwave" class="active">Synthwave</button>
+        <button id="theme-classic">Classic</button>
+        <button id="theme-mono">Monochrome</button>
+    </div>
+
+    <div id="game-over-modal">
+        <h2>Game Over</h2>
+        <button id="restart-button">Restart</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.3.3/pixi.min.js"></script>
+    <script src="js/ecs.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/systems.js"></script>
+    <script src="js/setup.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
