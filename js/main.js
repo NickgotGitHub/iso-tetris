@@ -55,19 +55,26 @@ restartButton.addEventListener('click', () => {
 ThemeManager.setTheme('synthwave');
 
 const createTetromino = (shape, type) => {
+    console.log('createTetromino called with:', shape, type);
     const entity = world.createEntity();
+    console.log('Entity created:', entity);
     const color = ThemeManager.themes[ThemeManager.currentTheme].pieceColors[type];
     const graphics = new PIXI.Graphics();
     graphics.beginFill(color);
     graphics.drawRect(0, 0, TILE_SIZE, TILE_SIZE);
     graphics.endFill();
 
-    world.addComponent(entity, Position(0, 0));
+    world.addComponent(entity, Position(100, 100)); // Position it in a visible area
     world.addComponent(entity, Renderable(new PIXI.Sprite(app.renderer.generateTexture(graphics))));
     world.addComponent(entity, Tetromino(shape, type));
     world.addComponent(entity, Velocity(0, 1));
 
+    console.log('Entity after components:', entity);
     app.stage.addChild(entity.components.renderable.sprite);
+    console.log('Sprite added to stage:', entity.components.renderable.sprite);
 };
 
-createTetromino([[1, 1, 1, 1]], 'I');
+// Create a tetromino after a short delay to ensure everything is loaded
+setTimeout(() => {
+    createTetromino([[1, 1, 1, 1]], 'I');
+}, 100);
