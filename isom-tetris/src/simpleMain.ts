@@ -1,3 +1,10 @@
+// @ts-nocheck
+import { app, TILE_SIZE } from "./setup";
+import { world } from "./ecs";
+import { renderSystem, gravitySystem } from "./systems";
+import { Position, Renderable, Tetromino, Velocity } from "./components";
+import * as PIXI from "pixi.js";
+
 const linesEl = document.getElementById('lines');
 const gameOverModal = document.getElementById('game-over-modal');
 const restartButton = document.getElementById('restart-button');

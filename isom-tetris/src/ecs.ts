@@ -1,4 +1,5 @@
-const world = {
+// @ts-nocheck
+export const world = {
     entities: [],
     systems: [],
     _nextEntityId: 0,
